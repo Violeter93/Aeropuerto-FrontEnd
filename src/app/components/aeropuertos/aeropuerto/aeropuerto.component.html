@@ -1,0 +1,58 @@
+
+
+<form [formGroup]="form" (ngSubmit)="guardarAeropuerto()">
+    <div class="form-group">
+        <label for="nombre" > Nombre</label>
+        <div class="input-group">
+            
+            
+            
+            <input  type="text" class="form-control" formControlName="nombre" placeholder="Nombre del aeropuerto">
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="ciudad" >Ciudad</label>
+        <div class="input-group">
+            
+           
+            
+            <input formControlName="ciudad" type="text" class="form-control" placeholder="Ciudad" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="form-group">
+                <label for="email" > Email</label>
+                <div class="input-group">
+                    
+                    
+                    
+                    <input formControlName="email" type="email" class="form-control" placeholder="correo@aeropuerto.com" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="m2" > m²</label>
+                <div class="input-group">
+                    
+                    
+                    
+                    <input formControlName="m2" type="number" class="form-control" placeholder="m²" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+       
+        <div class="col-md-6">
+        <button class="btn btn-success btn-lg" [disabled]="form?.invalid" type="submit">Guardar</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-outline-success btn-lg"  (click)="borrar()" >Limpiar</button>
+        </div>
+   
+    </div>
+    
+    
+</form>

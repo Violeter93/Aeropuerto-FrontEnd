@@ -1,0 +1,21 @@
+<table class="table table-sm">
+    <tr>
+        <th>Nombre</th>
+        <th>Ciudad</th>
+        <th>Email</th>
+        <th>m²</th>
+    </tr>
+<tr *ngFor=" let aeropuerto of aeropuertoService.list">
+    <td> {{ aeropuerto.nombre}}</td>
+    <td> {{ aeropuerto.ciudad}}</td>
+    <td> {{ aeropuerto.email}}</td>
+    <td> {{ aeropuerto.m2}}</td>
+    <td>
+        <i class="fa-solid fa-edit fa-lg text-info" (click)="editar(aeropuerto)"  style="cursor: pointer ;"></i>
+        
+    </td>
+    <td>
+        <i class="fa-solid fa-trash-alt fa-lg text-danger" (click)="eliminarAeropuerto(aeropuerto.id)" style="cursor: pointer ;" ></i>
+    </td>
+</tr>
+</table>
